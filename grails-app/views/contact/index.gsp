@@ -15,16 +15,18 @@
 <div id="content" role="main">
     <div class="container">
         <h2>Contact Us</h2>
-
-        <form>
+        <g:if test="${flash.message}">
+            <div class="alert alert-info" role="alert">${flash.message}</div>
+        </g:if>
+        <g:form controller="contact" action="save">
             <div class="form-group">
                 <div class="row">
                     <div class="col-md-6">
-                        <input type="text" class="form-control" placeholder="First name">
+                        <input type="text" name="firstName" class="form-control" placeholder="First name">
                     </div>
 
                     <div class="col-md-6">
-                        <input type="text" class="form-control" placeholder="Last name">
+                        <input type="text" name="lastName" class="form-control" placeholder="Last name">
                     </div>
                 </div>
             </div>
@@ -50,7 +52,7 @@
                 <label class="form-check-label" for="isSubscribe">Recieve daily update.</label>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+        </g:form>
     </div>
 </div>
 
