@@ -10,15 +10,4 @@ class HomeController {
         render view:"aboutus.gsp"
     }
 
-    def blogpost(){
-        render view: "blogpost.gsp"
-    }
-
-    def contactus(){
-        render view:"contactus.gsp"
-    }
-
-    def header(){
-        render template:"template.gsp"
-    }
 }

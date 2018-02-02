@@ -9,11 +9,7 @@ class UrlMappings {
             }
         }
 
-        "/"(view:"home/index")
-        "/index" (view: "/home/index")
-        "/aboutus" (view: "/home/aboutus")
-        "/blogpost" (view: "/home/blogpost")
-        "/contactus" (view: "/home/contactus")
+        "/"(view:'/index')
         "500"(view:'/error')
         "404"(view:'/notFound')
     }
