@@ -34,17 +34,17 @@
             <div class="form-group">
                 <div class="row">
                     <div class="col-md-6">
-                        <input type="text" class="form-control" id="phoneNumber" placeholder="Phone No.">
+                        <input type="text" name="phone" class="form-control" id="phoneNumber" placeholder="Phone No.">
                     </div>
 
                     <div class="col-md-6">
-                        <input type="email" class="form-control" id="email" placeholder="Email">
+                        <input type="email" name="email" class="form-control" id="email" placeholder="Email">
                     </div>
                 </div>
             </div>
 
             <div class="form-group">
-                <textarea class="form-control" id="comment" placeholder="Provide constructive feedback."></textarea>
+                <textarea class="form-control" name="message" id="comment" placeholder="Provide constructive feedback."></textarea>
             </div>
 
             <div class="form-check">
