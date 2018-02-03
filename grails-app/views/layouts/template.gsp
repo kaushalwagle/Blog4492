@@ -33,16 +33,16 @@
             <div class="navbar-collapse collapse navbar-right">
                 <ul class="nav navbar-nav">
                     <li >
-                        <a href="index">Home</a>
+                        <g:link controller="home" action="index">Home</g:link>
                     </li>
                     <li>
-                        <a href="aboutus">About Us</a>
+                        <g:link controller="home" action="aboutus">About Us</g:link>
                     </li>
                     <li>
-                        <a href="blogpost">Blog</a>
+                        <g:link controller="blog" action="list">Blog</g:link>
                     </li>
                     <li>
-                        <a href="contactus">Contact Us</a>
+                        <g:link controller="contact" action="index">Contact Us</g:link>
                     </li>
                 </ul>
             </div>

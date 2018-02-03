@@ -6,7 +6,7 @@ class Contact {
     String email
     Long phone
     String message
-    Date dateCreated
+    Date dateCreated = new Date()
 
     static constraints ={
             dateCreated nullable: true
