@@ -23,6 +23,7 @@
         <div class="container">
             <div class="panel panel-title">
                 <h3>${blogPost.title}</h3>
+                <g:link controller="author" action="detail" id="${blogPost.author.id}">${blogPost.author.firstName}</g:link>
                 <div class="panel-body text-center">
                     ${blogPost.content}
                 </div>

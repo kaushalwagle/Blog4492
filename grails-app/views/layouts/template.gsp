@@ -39,7 +39,10 @@
                         <g:link controller="home" action="aboutus">About Us</g:link>
                     </li>
                     <li>
-                        <g:link controller="blog" action="list">Blog</g:link>
+                        <g:link controller="blog" action="index">Blog</g:link>
+                    </li>
+                    <li>
+                        <g:link controller="author" action="index">Authors</g:link>
                     </li>
                     <li>
                         <g:link controller="contact" action="index">Contact Us</g:link>

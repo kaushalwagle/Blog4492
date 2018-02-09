@@ -15,21 +15,20 @@
 <div id="content" role="main">
     <div class="bg-welcome text-center">
         <div class="container">
-            <h1 style="color:#fff">
-                <strong>Authors</strong>
-            </h1>
-
+            <g:if test="${flash.message}">
+                <div class="alert alert-info" role="alert">${flash.message}</div>
+            </g:if>
             <g:link controller="author" action="create" class="btn btn-default">Create Author</g:link>
+
             <table class="table table-responsive">
                 <tr>
-                    <th>FirstName</th>
-                    <th>LastName</th>
+                    <th>First Name</th>
                     <th>Email</th>
+                    <th>Edit</th>
                 </tr>
                 <g:each in="${authors}" var="author">
                     <tr>
-                        <td>${author.firstName}</td>
-                        <td>${author.lastName}</td>
+                        <td><g:link controller="author" action="detail" id="${author.id}">${author.firstName + " " + author.lastName}</g:link></td>
                         <td>${author.email}</td>
                         <td><g:link controller="author" action="edit" id="${author.id}"
                                     class="btn btn-default">Edit</g:link></td>

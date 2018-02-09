@@ -3,38 +3,39 @@ package blog4492
 class AuthorController {
 
     def index() {
-        List <Author> authorList = Author.list()
+        List<Author> authorList = Author.list()
         render view: "index", model: [authors: authorList]
     }
 
     def save(Author author) {
         if (author.validate()) {
             author.save flush: true, failOrError: true
-            flash.message = "You have successfully created a new blog."
+            flash.message = "You have successfully created author."
         } else {      // something failed
-            flash.message = "Error occurred while creating blog"
+            flash.message = "Error occurred while creating author"
         }
         redirect action: "index"
     }
 
-
-    def update() {
-        blogPost.dateModified= new  Date()
-        if (blogPost.validate()) {
-            blogPost.save flush: true, failOrError: true
-            flash.message = "You have successfully updates: " + blogPost.title
+    def update(Author author) {
+        if (author.validate()) {
+            author.save flush: true, failOrError: true
+            flash.message = "You have successfully updated"
         } else {      // something failed
-            flash.message = "Error occurred while creating blog"
+            flash.message = "Error occurred while creating author"
         }
-        redirect action: "edit"
+        redirect action: "index"
     }
 
-    def create(){
+    def create() {
         render view: "create"
     }
 
+    def edit(Author author) {
+        render view: "edit", model: [author: author]
+    }
 
-    def edit(Author author){
-        render view: "edit", model: [aurhor: author]
+    def detail(Author author){
+        render view: "detail", model: [author: author]
     }
 }

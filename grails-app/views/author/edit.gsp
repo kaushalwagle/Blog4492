@@ -8,15 +8,13 @@
 <body>
 
 <content tag="pageName">
-    <span class="navbar-brand">Edit Blog</span>
+    <span class="navbar-brand">Author</span>
 </content>
 
 <div id="author" role="update">
     <div class="container">
-        <h2>Edit Blog(${author.firstName + " " + author.lastName})</h2>
-        <g:if test="${flash.message}">
-            <div class="alert alert-info" role="alert">${flash.message}</div>
-        </g:if>
+        <h2>Edit Author</h2>
+
         <g:form controller="author" action="update" id="${author.id}">
             <div class="form-group">
                 <div class="row">
@@ -42,7 +40,7 @@
                     </div>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary">Create</button>
+            <button type="submit" class="btn btn-primary">Edit</button>
         </g:form>
     </div>
 </div>

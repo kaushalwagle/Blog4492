@@ -9,12 +9,12 @@
 <body>
 
 <content tag="pageName">
-    <span class="navbar-brand">Create Author</span>
+    <span class="navbar-brand">Author</span>
 </content>
 
 <div id="author" role="save">
     <div class="container">
-        <h2>Create new blog post</h2>
+        <h2>Create new Author</h2>
         <g:if test="${flash.message}">
             <div class="alert alert-info" role="alert">${flash.message}</div>
         </g:if>
