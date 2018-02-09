@@ -31,13 +31,18 @@
 <table class="table table-responsive">
             <tr>
                 <th>Blog title</th>
-                >
+                <th>Author</th>
+                <th>Posted on</th>
+                <th>Edit</th>
+                <th>Last Modified</th>
             </tr>
     <g:each in="${blogs}" var="blog">
         <tr>
-            <td>${blog.title}</td>
+            <td><g:link controller="blog" action="detail" id="${blog.id}">${blog.title}</g:link></td>
             <td>${blog.author.firstName}</td>
+            <td>${blog.datePosted}</td>
             <td><g:link controller="blog" action="edit" id="${blog.id}" class="btn btn-default">Edit</g:link></td>
+            <td>${blog.dateModified}</td>
         </tr>
     </g:each>
 

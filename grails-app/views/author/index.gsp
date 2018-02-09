@@ -31,7 +31,7 @@
                         <td>${author.firstName}</td>
                         <td>${author.lastName}</td>
                         <td>${author.email}</td>
-                        <td><g:link controller="author" action="edit" params="id: ${author.id}"
+                        <td><g:link controller="author" action="edit" id="${author.id}"
                                     class="btn btn-default">Edit</g:link></td>
                     </tr>
                 </g:each>

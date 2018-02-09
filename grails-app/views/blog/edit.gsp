@@ -17,7 +17,7 @@
         <g:if test="${flash.message}">
             <div class="alert alert-info" role="alert">${flash.message}</div>
         </g:if>
-        <g:form controller="blog" action="update" params="id: ${postToEdit.id}">
+        <g:form controller="blog" action="update" id="${postToEdit.id}">
             <div class="form-group">
                 <div class="row">
                     <div class="col-md-6">

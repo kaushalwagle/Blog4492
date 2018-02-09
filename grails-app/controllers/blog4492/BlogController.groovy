@@ -32,7 +32,6 @@ class BlogController {
     }
 
     def update(Blog editedPost) {
-
         editedPost.dateModified= new  Date()
         if (editedPost.validate()) {
             editedPost.save flush: true, failOrError: true

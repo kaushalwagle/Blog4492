@@ -10,7 +10,6 @@
     </style>
     <title>Lure's Gallery</title>
 
-
 </head>
 
 <body>
@@ -22,12 +21,14 @@
 <div id="content" role="main">
     <div class="bg-welcome text-center">
         <div class="container">
-            <h1 style="color:#fff">
-                <strong>Blog</strong>
-            </h1>
+            <div class="panel panel-title">
+                <h3>${blogPost.title}</h3>
+                <div class="panel-body text-center">
+                    ${blogPost.content}
+                </div>
+            </div>
 
-            <p>Hello You are in Kaushal's blog.</p>
-            <g:link controller="blog" action="create" class="btn btn-default">Edit Post</g:link>
+            <g:link controller="blog" action="edit" id="${blogPost.id}" class="btn btn-default">Edit Post</g:link>
 
         </div>
     </div>
